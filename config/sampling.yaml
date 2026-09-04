@@ -1,0 +1,56 @@
+seed: 20260904
+
+release_date_min: "2015-01-01"
+
+min_vote_count: 100
+
+titles_per_vertical: 60
+
+release_year_buckets:
+  2015-2017:
+    start: 2015
+    end: 2017
+
+  2018-2020:
+    start: 2018
+    end: 2020
+
+  2021-2023:
+    start: 2021
+    end: 2023
+
+  2024-2026:
+    start: 2024
+    end: 2026
+
+popularity_groups: 3
+
+verticals:
+
+  anime:
+    endpoint: tv
+    genres:
+      - 16
+    origin_country:
+      - JP
+
+  kdrama:
+    endpoint: tv
+    origin_country:
+      - KR
+
+  animated_film:
+    endpoint: movie
+    genres:
+      - 16
+
+  anglophone_animation:
+    endpoint: tv
+    genres:
+      - 16
+    allowed_origin_countries:
+      - US
+      - GB
+      - CA
+      - AU
+      - NZ
