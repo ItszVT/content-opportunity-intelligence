@@ -1,0 +1,58 @@
+name: daily snapshot
+
+# TMDB has no historical archive. A day that isn't collected cannot be
+# backfilled, so this runs every day from V1 rather than when the scoring
+# pipeline is finished (§16, §23).
+
+on:
+  schedule:
+    # 03:17 UTC. Deliberately off the hour -- scheduled jobs on the hour
+    # queue behind everyone else's and can be delayed or dropped.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+# Never let two runs write the same snapshot at once.
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect daily snapshot
+        env:
+          TMDB_BEARER_TOKEN: ${{ secrets.TMDB_BEARER_TOKEN }}
+        run: python -m pipelines.daily
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ -z "$(git status --porcelain data/snapshots/)" ]; then
+            echo "No new snapshot to commit."
+            exit 0
+          fi
+
+          git add data/snapshots/
+          git commit -m "[collect] daily snapshot $(date -u +%Y-%m-%d)"
+
+          # The scheduled run may race a push; rebase rather than fail.
+          git pull --rebase --autostash
+          git push
