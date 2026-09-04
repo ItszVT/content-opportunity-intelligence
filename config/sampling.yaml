@@ -1,56 +1,54 @@
 seed: 20260904
 
+# Closed window (§4). Both bounds required for reproducibility.
 release_date_min: "2015-01-01"
-
+release_date_max: "2026-08-31"
 min_vote_count: 100
+include_adult: false
 
 titles_per_vertical: 60
-
 release_year_buckets:
   2015-2017:
     start: 2015
     end: 2017
-
   2018-2020:
     start: 2018
     end: 2020
-
   2021-2023:
     start: 2021
     end: 2023
-
   2024-2026:
     start: 2024
     end: 2026
-
 popularity_groups: 3
 
-verticals:
+# 4 buckets x 3 terciles = 12 cells (§8)
+target_per_cell: 5
+max_per_cell: 8
 
+verticals:
   anime:
     endpoint: tv
     genres:
       - 16
     origin_country:
       - JP
-
   kdrama:
     endpoint: tv
     origin_country:
       - KR
-
   animated_film:
     endpoint: movie
     genres:
       - 16
-
   anglophone_animation:
     endpoint: tv
     genres:
       - 16
-    allowed_origin_countries:
+    origin_country:
       - US
-      - GB
       - CA
+      - GB
+      - IE
       - AU
       - NZ
