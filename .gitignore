@@ -1,0 +1,33 @@
+# --- Secrets ---
+.env
+.env.local
+
+# --- Never committed (§19) ---
+data/raw/
+data/warehouse.duckdb
+data/warehouse.duckdb.wal
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# NOTE: data/frozen/, data/snapshots/ and data/outputs/ ARE committed.
+# Do not add them here.
