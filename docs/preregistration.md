@@ -1,89 +1,97 @@
 # Preregistration
-
 ## Project
 
 Content Opportunity Intelligence
 
-## Preregistration Date
+## Date
 
 2026-09-04
 
-## Purpose
+## Why I am writing this first
 
-This preregistration records the main research questions,
-hypotheses, and evaluation rules before the project analysis
-is conducted.
+Before collecting and analyzing the data, I want to write down what I expect to find and how I will test it.
 
-The purpose is to prevent the methodology from being changed
-after seeing the results.
+This is mainly to avoid changing the rules later just because I see an interesting result in the data.
 
-## H1: Cross Vertical Opportunity Gap
+If the results are different from what I expected, I will keep the original hypothesis and report what actually happened.
 
-K drama will have the largest demand versus competition gap
-among the four entertainment verticals:
+## H1: Which category has the biggest opportunity?
+
+My main hypothesis is:
+
+**K drama will have the biggest gap between audience demand and content competition.**
+
+The four categories in this project are:
 
 1. Anime
 2. K drama
 3. Animated film
 4. Anglophone animation
 
-### Operationalisation
+### How I will test this
 
-For each title, demand and observed SERP competition will be
-percentile ranked within its vertical.
+For every title, I will calculate a demand score and a competition score.
 
-The opportunity gap will be calculated as:
+Because the four categories have different levels of popularity, I will compare titles within their own category rather than putting every title into one overall ranking.
 
-Demand percentile minus Competition percentile
+I will then calculate:
 
-The median opportunity gap will then be compared across the
-four verticals.
+**Opportunity gap = Demand percentile − Competition percentile**
 
-The result will be reported whether or not it supports H1.
+After that, I will compare the median opportunity gap for each category.
 
-## H2: Demand and Audience Reception
+I will report the result even if K drama does not come out on top.
 
-Search demand and audience reception will show limited
-association across the sampled titles.
+## H2: Does popularity mean people actually like a title?
 
-This tests whether demand and audience quality provide
-meaningfully different information.
+My second hypothesis is:
 
-The relationship will be measured using an appropriate
-association statistic and reported regardless of whether the
-relationship is strong or weak.
+**Search demand and audience ratings will not be strongly related.**
 
-## H3: Opportunity Score Versus Popularity
+The reason I want to test this is that a title can be searched a lot without necessarily being highly rated.
 
-The Opportunity Score will produce a meaningfully different
-ranking from TMDB popularity.
+For example, a controversial or heavily promoted show might receive a lot of attention but have an average rating.
 
-TMDB popularity will be treated as a benchmark and sampling
-variable, not as a component of the Opportunity Score.
+I will compare demand with audience reception and report the strength of the relationship.
 
-The comparison will include rank correlation and top 10
-overlap.
+## H3: Does my Opportunity Score add anything beyond popularity?
 
-If the Opportunity Score is highly similar to TMDB
-popularity, the project will report that the Opportunity Score
-did not provide meaningful differentiation.
+This is an important test for the project.
 
-## Reporting Rule
+My hypothesis is:
 
-Results will not be selectively reported based on whether
-they support the hypotheses.
+**The Opportunity Score will produce a meaningfully different ranking from TMDB popularity.**
 
-Unsupported, inconclusive, and unexpected findings will be
-reported alongside supporting findings.
+TMDB popularity will be used as a benchmark and as part of the sampling process.
 
-## Changes After Preregistration
+It will not be included as a direct component of the Opportunity Score.
 
-Any genuine methodological change made after this
-preregistration must be documented separately with:
+I will compare the two rankings using:
 
-1. What changed
-2. Why it changed
-3. Date of change
-4. Original approach
-5. New approach
-6. Effect on the analysis
+1. Rank correlation
+2. Top 10 overlap
+
+If my Opportunity Score ends up looking almost identical to TMDB popularity, I will report that honestly.
+
+That would mean the scoring system is not adding much beyond a simple popularity ranking.
+
+## What I will not do
+
+I will not change the hypotheses or scoring rules just to make the final results look better.
+
+If a hypothesis is wrong, that is still a useful result.
+
+If the results are unclear, I will say they are unclear rather than forcing a conclusion.
+
+## If I need to change something later
+
+Sometimes a real problem may be discovered while building the project.
+
+If I need to change an important decision after this document is committed, I will record:
+
+1. What I changed
+2. Why I changed it
+3. The date of the change
+4. What the original approach was
+5. What the new approach is
+6. Whether the change could affect the results
