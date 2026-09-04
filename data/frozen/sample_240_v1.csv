@@ -1,0 +1,241 @@
+title_id,vertical,tmdb_id,tmdb_endpoint,title_primary,title_native,release_date,year_bucket,popularity_tercile,popularity,vote_average,vote_count,sampled_at
+anime_001,anime,62745,tv,Is It Wrong to Try to Pick Up Girls in a Dungeon?,ダンジョンに出会いを求めるのは間違っているだろうか,2015-04-04,2015-2017,1,3.6416,7.336,323,2026-09-04
+anime_002,anime,65333,tv,Myriad Colors Phantom World,無彩限のファントム・ワールド,2016-01-07,2015-2017,1,8.7714,7.645,138,2026-09-04
+anime_003,anime,65369,tv,Grimgar of Fantasy and Ash,灰と幻想のグリムガル,2016-01-11,2015-2017,1,7.8634,7.396,149,2026-09-04
+anime_004,anime,70639,tv,WorldEnd: What are you doing at the end of the world? Are you busy? Will you save us?,終末なにしてますか？忙しいですか？救ってもらっていいですか？,2017-04-11,2015-2017,1,5.6213,8.031,146,2026-09-04
+anime_005,anime,72296,tv,My First Girlfriend Is a Gal,はじめてのギャル,2017-07-12,2015-2017,1,9.2738,8.26,423,2026-09-04
+anime_006,anime,63145,tv,Charlotte,シャーロット,2015-07-05,2015-2017,2,15.1437,8.2,664,2026-09-04
+anime_007,anime,65292,tv,Ajin,亜人,2016-01-16,2015-2017,2,10.8655,7.911,355,2026-09-04
+anime_008,anime,66053,tv,Berserk,ベルセルク,2016-07-01,2015-2017,2,9.8667,7.404,308,2026-09-04
+anime_009,anime,67676,tv,The Disastrous Life of Saiki K.,斉木楠雄のΨ難,2016-07-11,2015-2017,2,17.3558,8.291,386,2026-09-04
+anime_010,anime,74185,tv,Girls' Last Tour,少女終末旅行,2017-10-06,2015-2017,2,11.1054,8.008,121,2026-09-04
+anime_011,anime,63663,tv,Gate,ゲート 自衛隊 彼の地にて、斯く戦えり,2015-07-04,2015-2017,3,21.9595,7.52,196,2026-09-04
+anime_012,anime,64196,tv,Overlord,オーバーロード,2015-07-07,2015-2017,3,37.3348,8.445,1128,2026-09-04
+anime_013,anime,69291,tv,Miss Kobayashi's Dragon Maid,小林さんちのメイドラゴン,2017-01-12,2015-2017,3,23.3752,8.3,883,2026-09-04
+anime_014,anime,69346,tv,Saga of Tanya the Evil,幼女戦記,2017-01-06,2015-2017,3,33.3098,8.218,456,2026-09-04
+anime_015,anime,73223,tv,Black Clover,ブラッククローバー,2017-10-03,2015-2017,3,22.9119,8.493,2173,2026-09-04
+anime_016,anime,76130,tv,Killing Bites,キリングバイツ,2018-01-13,2018-2020,1,5.8154,7.7,148,2026-09-04
+anime_017,anime,78462,tv,Devils' Line,デビルズライン,2018-04-07,2018-2020,1,5.6973,7.85,210,2026-09-04
+anime_018,anime,84666,tv,WATATEN!: an Angel Flew Down to Me,私に天使が舞い降りた！,2019-01-08,2018-2020,1,5.25,8.201,112,2026-09-04
+anime_019,anime,85844,tv,Wise Man's Grandchild,賢者の孫,2019-04-10,2018-2020,1,7.9535,7.997,355,2026-09-04
+anime_020,anime,88046,tv,Fire Force,炎炎ノ消防隊,2019-07-05,2018-2020,1,8.6127,8.322,659,2026-09-04
+anime_021,anime,92090,tv,Blade of the Immortal,無限の住人-IMMORTAL-,2019-10-10,2018-2020,2,12.2078,7.142,116,2026-09-04
+anime_022,anime,93256,tv,Cautious Hero: The Hero Is Overpowered but Overly Cautious,慎重勇者～この勇者が俺TUEEEくせに慎重すぎる～,2019-10-02,2018-2020,2,12.7868,8.159,305,2026-09-04
+anime_023,anime,94693,tv,Wandering Witch: The Journey of Elaina,魔女の旅々,2020-10-02,2018-2020,2,12.5597,7.608,120,2026-09-04
+anime_024,anime,94795,tv,Cagaster of an Insect Cage,虫籠のカガステル,2020-02-06,2018-2020,2,9.5053,7.9,209,2026-09-04
+anime_025,anime,96444,tv,Interspecies Reviewers,異種族レビュアーズ,2020-01-11,2018-2020,2,15.7347,7.9,646,2026-09-04
+anime_026,anime,76075,tv,Laid-Back Camp,ゆるキャン△,2018-01-04,2018-2020,3,31.7203,8.16,128,2026-09-04
+anime_027,anime,82739,tv,Rascal Does Not Dream of Bunny Girl Senpai,青春ブタ野郎はバニーガール先輩の夢を見ない,2018-10-04,2018-2020,3,31.7229,8.518,1334,2026-09-04
+anime_028,anime,85991,tv,Fruits Basket,フルーツバスケット,2019-04-06,2018-2020,3,29.6722,8.0,180,2026-09-04
+anime_029,anime,95269,tv,Toilet-Bound Hanako-kun,地縛少年花子くん,2020-01-10,2018-2020,3,25.4519,8.6,786,2026-09-04
+anime_030,anime,97860,tv,Tower of God,神之塔 -Tower of God-,2020-04-02,2018-2020,3,36.1087,8.12,530,2026-09-04
+anime_031,anime,99618,tv,"So I'm a Spider, So What?",蜘蛛ですが、なにか？,2021-01-08,2021-2023,1,6.7979,7.794,209,2026-09-04
+anime_032,anime,100567,tv,Combatants Will Be Dispatched!,戦闘員、派遣します！,2021-04-04,2021-2023,1,8.538,7.822,171,2026-09-04
+anime_033,anime,110642,tv,RESIDENT EVIL: Infinite Darkness,バイオハザード: インフィニット ダークネス,2021-07-08,2021-2023,1,7.4921,7.549,913,2026-09-04
+anime_034,anime,112940,tv,Battle Game in 5 Seconds,出会って5秒でバトル,2021-07-13,2021-2023,1,5.6695,7.742,126,2026-09-04
+anime_035,anime,114198,tv,Full Dive: This Ultimate Next-Gen Full Dive RPG Is Even Shittier Than Real Life!,究極進化したフルダイブRPGが現実よりもクソゲーだったら,2021-04-07,2021-2023,1,6.2794,7.7,115,2026-09-04
+anime_036,anime,104699,tv,SHAMAN KING,SHAMAN KING,2021-04-01,2021-2023,2,14.8162,8.165,313,2026-09-04
+anime_037,anime,117706,tv,"The Fruit of Evolution: Before I Knew It, My Life Had It Made",進化の実～知らないうちに勝ち組人生～,2021-10-05,2021-2023,2,10.0809,7.183,134,2026-09-04
+anime_038,anime,194774,tv,Vermeil in Gold,金装のヴェルメイユ~崖っぷち魔術師は最強の厄災と魔法世界を突き進む~,2022-07-05,2021-2023,2,12.8752,7.192,112,2026-09-04
+anime_039,anime,208891,tv,Tengoku Daimakyo,天国大魔境,2023-04-01,2021-2023,2,16.8355,7.979,291,2026-09-04
+anime_040,anime,217766,tv,Zom 100: Bucket List of the Dead,ゾン100～ゾンビになるまでにしたい100のこと～,2023-07-09,2021-2023,2,14.6535,7.536,222,2026-09-04
+anime_041,anime,104711,tv,EDENS ZERO,EDENS ZERO,2021-04-11,2021-2023,3,24.7845,7.67,227,2026-09-04
+anime_042,anime,139512,tv,Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs,乙女ゲー世界はモブに厳しい世界です,2022-04-03,2021-2023,3,28.3602,7.6,101,2026-09-04
+anime_043,anime,154743,tv,The Angel Next Door Spoils Me Rotten,お隣の天使様にいつの間にか駄目人間にされていた件,2023-01-07,2021-2023,3,23.2698,7.702,119,2026-09-04
+anime_044,anime,205050,tv,Shangri-La Frontier,シャングリラ・フロンティア,2023-10-01,2021-2023,3,24.0349,8.187,251,2026-09-04
+anime_045,anime,223564,tv,"The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",君のことが大大大大大好きな100人の彼女,2023-10-08,2021-2023,3,46.6349,8.3,217,2026-09-04
+anime_046,anime,131365,tv,The Wrong Way to Use Healing Magic,治癒魔法の間違った使い方,2024-01-06,2024-2026,1,7.711,7.9,120,2026-09-04
+anime_047,anime,197848,tv,The Unwanted Undead Adventurer,望まぬ不死の冒険者,2024-01-08,2024-2026,1,6.1416,7.67,103,2026-09-04
+anime_048,anime,213181,tv,Hokkaido Gals Are Super Adorable!,道産子ギャルはなまらめんこい,2024-01-09,2024-2026,1,8.2492,8.142,116,2026-09-04
+anime_049,anime,235389,tv,Re:Monster,Re:Monster,2024-04-05,2024-2026,1,6.2549,8.04,149,2026-09-04
+anime_050,anime,250598,tv,"The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",新米オッサン冒険者、最強パーティに死ぬほど鍛えられて無敵になる。,2024-07-02,2024-2026,1,9.2659,7.979,119,2026-09-04
+anime_051,anime,196950,tv,Witch Hat Atelier,とんがり帽子のアトリエ,2026-04-06,2024-2026,2,17.376,8.73,178,2026-09-04
+anime_052,anime,237233,tv,Chillin' in Another World with Level 2 Super Cheat Powers,Lv2からチートだった元勇者候補のまったり異世界ライフ,2024-04-08,2024-2026,2,15.668,7.262,103,2026-09-04
+anime_053,anime,239287,tv,Terminator Zero,Terminator Zero,2024-08-29,2024-2026,2,15.1463,7.02,229,2026-09-04
+anime_054,anime,249907,tv,Sentenced to Be a Hero,勇者刑に処す 懲罰勇者9004隊刑務記録,2026-01-03,2024-2026,2,15.3325,8.288,120,2026-09-04
+anime_055,anime,284445,tv,Takopi's Original Sin,タコピーの原罪,2025-06-28,2024-2026,2,14.1403,8.808,198,2026-09-04
+anime_056,anime,139060,tv,Chained Soldier,魔都精兵のスレイブ,2024-01-04,2024-2026,3,28.6701,8.0,114,2026-09-04
+anime_057,anime,213830,tv,I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability,転生したら第七王子だったので、気ままに魔術を極めます,2024-04-02,2024-2026,3,20.9349,7.7,115,2026-09-04
+anime_058,anime,231003,tv,Lazarus,Lazarus,2025-04-06,2024-2026,3,28.7272,7.519,133,2026-09-04
+anime_059,anime,236994,tv,Dragon Ball DAIMA,ドラゴンボールDAIMA,2024-10-11,2024-2026,3,25.086,8.178,621,2026-09-04
+anime_060,anime,260823,tv,From Old Country Bumpkin to Master Swordsman,片田舎のおっさん、剣聖になる,2025-04-05,2024-2026,3,35.6854,7.287,102,2026-09-04
+kdrama_001,kdrama,62266,tv,"Kill Me, Heal Me","킬미, 힐미",2015-01-07,2015-2017,1,7.2155,8.1,197,2026-09-04
+kdrama_002,kdrama,66393,tv,"Bring It On, Ghost",싸우자 귀신아,2016-07-11,2015-2017,1,5.9652,8.0,128,2026-09-04
+kdrama_003,kdrama,70191,tv,The Liar and His Lover,그녀는 거짓말을 너무 사랑해,2017-03-20,2015-2017,1,3.5849,7.467,152,2026-09-04
+kdrama_004,kdrama,70372,tv,My Only Love Song,마이 온리 러브송,2017-07-01,2015-2017,1,3.07,8.1,127,2026-09-04
+kdrama_005,kdrama,75123,tv,A Korean Odyssey,화유기,2017-12-23,2015-2017,1,7.1746,8.061,312,2026-09-04
+kdrama_006,kdrama,64840,tv,Signal,시그널,2016-01-22,2015-2017,2,9.6697,8.197,198,2026-09-04
+kdrama_007,kdrama,66496,tv,Hwarang: The Poet Warrior Youth,화랑,2016-12-19,2015-2017,2,7.8794,7.887,283,2026-09-04
+kdrama_008,kdrama,67014,tv,"Hello, My Twenties!",청춘시대,2016-07-22,2015-2017,2,7.9543,7.232,138,2026-09-04
+kdrama_009,kdrama,68349,tv,Weightlifting Fairy Kim Bok-joo,역도요정 김복주,2016-11-16,2015-2017,2,8.5092,8.5,961,2026-09-04
+kdrama_010,kdrama,71349,tv,Suspicious Partner,수상한 파트너,2017-05-10,2015-2017,2,10.8089,7.839,174,2026-09-04
+kdrama_011,kdrama,67018,tv,The Legend of the Blue Sea,푸른 바다의 전설,2016-11-16,2015-2017,3,12.1983,7.439,220,2026-09-04
+kdrama_012,kdrama,68398,tv,Dr. Romantic,낭만닥터 김사부,2016-11-07,2015-2017,3,26.6633,8.103,131,2026-09-04
+kdrama_013,kdrama,68814,tv,Strong Girl Bong-soon,힘쎈여자 도봉순,2017-02-24,2015-2017,3,12.5284,8.149,326,2026-09-04
+kdrama_014,kdrama,70626,tv,Stranger,비밀의 숲,2017-06-10,2015-2017,3,12.4751,8.26,215,2026-09-04
+kdrama_015,kdrama,70649,tv,While You Were Sleeping,당신이 잠든 사이에,2017-09-27,2015-2017,3,13.1907,8.4,157,2026-09-04
+kdrama_016,kdrama,81211,tv,"My Secret, Terrius",내 뒤에 테리우스,2018-09-27,2018-2020,1,7.3366,8.198,144,2026-09-04
+kdrama_017,kdrama,83634,tv,Memories of the Alhambra,알함브라 궁전의 추억,2018-12-01,2018-2020,1,5.4572,7.592,120,2026-09-04
+kdrama_018,kdrama,87527,tv,My First First Love,첫사랑은 처음이라서,2019-04-18,2018-2020,1,4.7222,8.204,556,2026-09-04
+kdrama_019,kdrama,99048,tv,Start-Up,스타트업,2020-10-17,2018-2020,1,6.4778,8.173,385,2026-09-04
+kdrama_020,kdrama,106600,tv,BTS In the SOOP,In the SOOP BTS편,2020-08-19,2018-2020,1,4.6333,8.488,407,2026-09-04
+kdrama_021,kdrama,78385,tv,Something in the Rain,밥 잘 사주는 예쁜 누나,2018-03-30,2018-2020,2,8.9978,7.8,141,2026-09-04
+kdrama_022,kdrama,80737,tv,My ID is Gangnam Beauty,내 아이디는 강남미인,2018-07-27,2018-2020,2,9.8196,7.321,156,2026-09-04
+kdrama_023,kdrama,89410,tv,Search: WWW,검색어를 입력하세요 WWW,2019-06-05,2018-2020,2,8.2286,8.019,106,2026-09-04
+kdrama_024,kdrama,99494,tv,Flower of Evil,악의 꽃,2020-07-29,2018-2020,2,9.9694,8.259,601,2026-09-04
+kdrama_025,kdrama,108261,tv,Mr. Queen,철인왕후,2020-12-12,2018-2020,2,10.4096,8.5,508,2026-09-04
+kdrama_026,kdrama,76557,tv,Welcome to Waikiki,으라차차 와이키키,2018-02-05,2018-2020,3,14.016,7.8,109,2026-09-04
+kdrama_027,kdrama,96102,tv,Hospital Playlist,슬기로운 의사생활,2020-03-12,2018-2020,3,20.0678,8.579,177,2026-09-04
+kdrama_028,kdrama,96462,tv,It's Okay to Not Be Okay,사이코지만 괜찮아,2020-06-20,2018-2020,3,11.6092,8.504,1516,2026-09-04
+kdrama_029,kdrama,96648,tv,Sweet Home,스위트홈,2020-12-18,2018-2020,3,26.8023,8.211,1612,2026-09-04
+kdrama_030,kdrama,112888,tv,True Beauty,여신강림,2020-12-09,2018-2020,3,27.3544,8.3,2714,2026-09-04
+kdrama_031,kdrama,110545,tv,So Not Worth It,내일 지구가 망해버렸으면 좋겠어,2021-06-18,2021-2023,1,3.5781,7.701,107,2026-09-04
+kdrama_032,kdrama,125350,tv,Mad for Each Other,이 구역의 미친 X,2021-05-24,2021-2023,1,4.3823,8.145,131,2026-09-04
+kdrama_033,kdrama,133678,tv,Once Upon a Small Town,어쩌다 전원일기,2022-09-05,2021-2023,1,6.5081,7.5,161,2026-09-04
+kdrama_034,kdrama,137040,tv,Black Knight,택배기사,2023-05-12,2021-2023,1,5.0514,7.404,317,2026-09-04
+kdrama_035,kdrama,137094,tv,Love to Hate You,연애대전,2023-02-10,2021-2023,1,7.1599,8.2,126,2026-09-04
+kdrama_036,kdrama,116386,tv,Doom at Your Service,어느 날 우리 집 현관으로 멸망이 들어왔다,2021-05-10,2021-2023,2,9.4506,7.929,537,2026-09-04
+kdrama_037,kdrama,152511,tv,Forecasting Love and Weather,기상청 사람들: 사내연애 잔혹사 편,2022-02-12,2021-2023,2,8.3539,7.3,139,2026-09-04
+kdrama_038,kdrama,153496,tv,Reborn Rich,재벌집 막내아들,2022-11-18,2021-2023,2,8.3142,8.004,120,2026-09-04
+kdrama_039,kdrama,208336,tv,Revenge of Others,3인칭 복수,2022-11-09,2021-2023,2,9.524,8.3,309,2026-09-04
+kdrama_040,kdrama,214999,tv,The Good Bad Mother,나쁜 엄마,2023-04-26,2021-2023,2,8.94,8.873,197,2026-09-04
+kdrama_041,kdrama,127529,tv,Bloodhounds,사냥개들,2023-06-09,2021-2023,3,36.7241,8.504,792,2026-09-04
+kdrama_042,kdrama,135340,tv,Happiness,해피니스,2021-11-05,2021-2023,3,15.3913,8.084,586,2026-09-04
+kdrama_043,kdrama,136283,tv,The Glory,더 글로리,2022-12-30,2021-2023,3,25.7643,8.5,950,2026-09-04
+kdrama_044,kdrama,155226,tv,Big Mouth,빅마우스,2022-07-29,2021-2023,3,17.0675,8.346,363,2026-09-04
+kdrama_045,kdrama,205082,tv,Vigilante,비질란테,2023-11-08,2021-2023,3,12.8139,8.483,116,2026-09-04
+kdrama_046,kdrama,156484,tv,The 8 Show,The 8 Show,2024-05-17,2024-2026,1,7.3634,7.254,344,2026-09-04
+kdrama_047,kdrama,226529,tv,Light Shop,조명가게,2024-12-04,2024-2026,1,7.6359,8.425,266,2026-09-04
+kdrama_048,kdrama,231749,tv,Miss Night and Day,낮과 밤이 다른 그녀,2024-06-15,2024-2026,1,6.7376,8.548,155,2026-09-04
+kdrama_049,kdrama,232616,tv,The Atypical Family,히어로는 아닙니다만,2024-05-04,2024-2026,1,7.195,8.229,118,2026-09-04
+kdrama_050,kdrama,271885,tv,As You Stood By,당신이 죽였다,2025-11-07,2024-2026,1,6.8918,8.235,102,2026-09-04
+kdrama_051,kdrama,208825,tv,Parasyte: The Grey,기생수: 더 그레이,2024-04-05,2024-2026,2,7.9032,7.446,341,2026-09-04
+kdrama_052,kdrama,222233,tv,Doctor Slump,닥터 슬럼프,2024-01-27,2024-2026,2,11.4019,8.1,149,2026-09-04
+kdrama_053,kdrama,259015,tv,My Dearest Nemesis,그놈은 흑염룡,2025-02-17,2024-2026,2,9.5849,8.115,131,2026-09-04
+kdrama_054,kdrama,259288,tv,Friendly Rivalry,선의의 경쟁,2025-02-10,2024-2026,2,9.8595,8.7,122,2026-09-04
+kdrama_055,kdrama,281016,tv,Boyfriend on Demand,월간남친,2026-03-06,2024-2026,2,11.2277,8.386,149,2026-09-04
+kdrama_056,kdrama,228689,tv,"Genie, Make a Wish",다 이루어질지니,2025-10-03,2024-2026,3,14.965,7.9,137,2026-09-04
+kdrama_057,kdrama,231280,tv,Good Boy,굿보이,2025-05-31,2024-2026,3,12.7211,8.594,192,2026-09-04
+kdrama_058,kdrama,233347,tv,Study Group,스터디그룹,2025-01-23,2024-2026,3,18.9845,8.601,159,2026-09-04
+kdrama_059,kdrama,239385,tv,The Manipulated,조각도시,2025-11-05,2024-2026,3,14.0587,8.34,141,2026-09-04
+kdrama_060,kdrama,303143,tv,My Royal Nemesis,멋진 신세계,2026-05-08,2024-2026,3,15.0812,8.905,100,2026-09-04
+animated_film_001,animated_film,302960,movie,Scooby-Doo! Moon Monster Madness,Scooby-Doo! Moon Monster Madness,2015-02-03,2015-2017,1,3.3488,7.657,181,2026-09-04
+animated_film_002,animated_film,333824,movie,Don't Hug Me I'm Scared 4,Don't Hug Me I'm Scared 4,2015-03-31,2015-2017,1,1.7593,7.7,100,2026-09-04
+animated_film_003,animated_film,351981,movie,Bear Story,Historia de un oso,2016-01-29,2015-2017,1,0.6077,7.467,121,2026-09-04
+animated_film_004,animated_film,357400,movie,Digimon Adventure tri. Part 1: Reunion,デジモンアドベンチャー tri. 第１章「再会」,2015-11-21,2015-2017,1,1.993,6.808,104,2026-09-04
+animated_film_005,animated_film,373879,movie,One Piece: Adventure of Nebulandia,ONE PIECE 〜アドベンチャー オブ ネブランディア〜,2015-12-20,2015-2017,1,2.8977,7.7,210,2026-09-04
+animated_film_006,animated_film,471880,movie,Cinderella the Cat,Gatta Cenerentola,2017-09-14,2015-2017,1,1.5921,7.022,227,2026-09-04
+animated_film_007,animated_film,234004,movie,Ratchet & Clank,Ratchet & Clank,2016-04-13,2015-2017,2,4.9497,5.773,686,2026-09-04
+animated_film_008,animated_film,357786,movie,Kizumonogatari Part 1: Tekketsu,傷物語〈Ⅰ鉄血篇〉,2016-01-08,2015-2017,2,5.2744,7.712,321,2026-09-04
+animated_film_009,animated_film,366170,movie,Yu-Gi-Oh!: The Dark Side of Dimensions,遊☆戯☆王 THE DARK SIDE OF DIMENSIONS,2016-04-23,2015-2017,2,4.3202,7.6,469,2026-09-04
+animated_film_010,animated_film,382517,movie,Open Season: Scared Silly,Open Season: Scared Silly,2015-12-18,2015-2017,2,6.3448,5.927,395,2026-09-04
+animated_film_011,animated_film,455411,movie,Tom and Jerry: Willy Wonka & the Chocolate Factory,Tom and Jerry: Willy Wonka & the Chocolate Factory,2017-06-28,2015-2017,2,6.4461,6.729,164,2026-09-04
+animated_film_012,animated_film,150540,movie,Inside Out,Inside Out,2015-06-17,2015-2017,3,33.8118,7.906,23832,2026-09-04
+animated_film_013,animated_film,227973,movie,The Peanuts Movie,The Peanuts Movie,2015-11-05,2015-2017,3,8.7405,6.985,1837,2026-09-04
+animated_film_014,animated_film,355338,movie,Riley's First Date?,Riley's First Date?,2015-11-03,2015-2017,3,10.3618,7.196,1122,2026-09-04
+animated_film_015,animated_film,372754,movie,Dou kyu sei – Classmates,同級生,2016-02-20,2015-2017,3,7.7934,8.315,463,2026-09-04
+animated_film_016,animated_film,460793,movie,Olaf's Frozen Adventure,Olaf's Frozen Adventure,2017-10-27,2015-2017,3,8.663,6.454,1516,2026-09-04
+animated_film_017,animated_film,528644,movie,Bilby,Bilby,2018-06-06,2018-2020,1,2.1138,7.986,210,2026-09-04
+animated_film_018,animated_film,553837,movie,Code Geass: Lelouch of the Re;surrection,コードギアス 復活のルルーシュ,2019-02-09,2018-2020,1,3.6577,7.171,126,2026-09-04
+animated_film_019,animated_film,574093,movie,Float,Float,2019-11-12,2018-2020,1,1.5873,7.266,301,2026-09-04
+animated_film_020,animated_film,583055,movie,Spider-Ham: Caught in a Ham,Spider-Ham: Caught in a Ham,2019-03-19,2018-2020,1,1.8861,6.844,228,2026-09-04
+animated_film_021,animated_film,597398,movie,Away,Projām,2019-11-15,2018-2020,1,1.8812,6.487,119,2026-09-04
+animated_film_022,animated_film,627093,movie,Curious George: Royal Monkey,Curious George: Royal Monkey,2019-09-10,2018-2020,1,2.9256,7.49,102,2026-09-04
+animated_film_023,animated_film,513347,movie,Flavors of Youth,肆式青春,2018-08-04,2018-2020,2,4.6925,6.876,595,2026-09-04
+animated_film_024,animated_film,546728,movie,Auntie Edna,Auntie Edna,2018-10-23,2018-2020,2,4.5972,7.195,284,2026-09-04
+animated_film_025,animated_film,556901,movie,Teen Titans Go! vs. Teen Titans,Teen Titans Go! vs. Teen Titans,2019-07-21,2018-2020,2,5.9725,7.517,532,2026-09-04
+animated_film_026,animated_film,592867,movie,Dragon Quest: Your Story,ドラゴンクエスト ユア・ストーリー,2019-08-02,2018-2020,2,3.7824,6.8,242,2026-09-04
+animated_film_027,animated_film,732670,movie,LEGO Star Wars Holiday Special,LEGO Star Wars Holiday Special,2020-11-17,2018-2020,2,4.1658,6.56,372,2026-09-04
+animated_film_028,animated_film,431693,movie,Spies in Disguise,Spies in Disguise,2019-12-04,2018-2020,3,13.9934,7.543,3039,2026-09-04
+animated_film_029,animated_film,441130,movie,Wolfwalkers,Wolfwalkers,2020-10-26,2018-2020,3,11.0434,8.2,1443,2026-09-04
+animated_film_030,animated_film,481084,movie,The Addams Family,The Addams Family,2019-10-10,2018-2020,3,9.9318,6.598,2530,2026-09-04
+animated_film_031,animated_film,635302,movie,Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train,劇場版「鬼滅の刃」無限列車編,2020-10-16,2018-2020,3,20.2912,8.227,4663,2026-09-04
+animated_film_032,animated_film,667520,movie,A Whisker Away,泣きたい私は猫をかぶる,2020-06-18,2018-2020,3,10.4152,7.87,1507,2026-09-04
+animated_film_033,animated_film,560052,movie,My Father's Dragon,My Father's Dragon,2022-11-04,2021-2023,1,3.6128,7.016,122,2026-09-04
+animated_film_034,animated_film,805411,movie,Descendants: The Royal Wedding,Descendants: The Royal Wedding,2021-08-13,2021-2023,1,3.6684,6.652,168,2026-09-04
+animated_film_035,animated_film,858064,movie,Night of the Animated Dead,Night of the Animated Dead,2021-09-21,2021-2023,1,2.9216,6.1,122,2026-09-04
+animated_film_036,animated_film,877957,movie,Drifting Home,雨を告げる漂流団地,2022-09-09,2021-2023,1,3.2563,7.356,354,2026-09-04
+animated_film_037,animated_film,893366,movie,Little Nicholas: Happy as Can Be,Le Petit Nicolas - Qu'est-ce qu'on attend pour être heureux ?,2022-02-15,2021-2023,1,1.9873,6.847,111,2026-09-04
+animated_film_038,animated_film,459003,movie,Mavka: The Forest Song,Мавка: Лісова пісня,2023-03-02,2021-2023,2,6.0327,7.161,861,2026-09-04
+animated_film_039,animated_film,726684,movie,Miraculous World: Shanghai - The Legend of Ladydragon,"Miraculous World : Shanghai, la légende de Ladydragon",2021-05-15,2021-2023,2,5.6796,7.909,700,2026-09-04
+animated_film_040,animated_film,782054,movie,Doraemon the Movie: Nobita's Little Star Wars 2021,映画ドラえもん のび太の宇宙小戦争 2021,2022-03-04,2021-2023,2,3.7854,6.5,133,2026-09-04
+animated_film_041,animated_film,912598,movie,Bubble,バブル,2022-02-14,2021-2023,2,4.9057,7.263,493,2026-09-04
+animated_film_042,animated_film,1003581,movie,Justice League: Warworld,Justice League: Warworld,2023-07-25,2021-2023,2,6.1763,6.731,310,2026-09-04
+animated_film_043,animated_film,459151,movie,The Boss Baby: Family Business,The Boss Baby: Family Business,2021-07-01,2021-2023,3,15.3201,7.325,2721,2026-09-04
+animated_film_044,animated_film,629542,movie,The Bad Guys,The Bad Guys,2022-03-17,2021-2023,3,18.9986,7.515,2665,2026-09-04
+animated_film_045,animated_film,776305,movie,Belle,竜とそばかすの姫,2021-07-16,2021-2023,3,8.7391,7.613,909,2026-09-04
+animated_film_046,animated_film,1075794,movie,Leo,Leo,2023-11-17,2021-2023,3,12.8201,7.344,1395,2026-09-04
+animated_film_047,animated_film,1121575,movie,Babylon 5: The Road Home,Babylon 5: The Road Home,2023-08-14,2021-2023,3,8.2292,7.078,102,2026-09-04
+animated_film_048,animated_film,840889,movie,Stopmotion,Stopmotion,2024-02-22,2024-2026,1,3.2669,6.11,231,2026-09-04
+animated_film_049,animated_film,842859,movie,The Most Precious of Cargoes,La Plus Précieuse des marchandises,2024-11-20,2024-2026,1,2.1692,7.746,203,2026-09-04
+animated_film_050,animated_film,1230393,movie,Monsters 103 Mercies Dragon Damnation,MONSTERS 一百三情飛龍侍極,2024-01-21,2024-2026,1,3.536,7.194,144,2026-09-04
+animated_film_051,animated_film,987400,movie,Aztec Batman: Clash of Empires,Batman Azteca: Choque de imperios,2025-09-18,2024-2026,2,5.0031,7.6,164,2026-09-04
+animated_film_052,animated_film,1290938,movie,South Park: The End of Obesity,South Park: The End of Obesity,2024-05-24,2024-2026,2,5.6865,7.411,275,2026-09-04
+animated_film_053,animated_film,1299652,movie,Watchmen: Chapter II,Watchmen: Chapter II,2024-11-25,2024-2026,2,5.1418,7.345,181,2026-09-04
+animated_film_054,animated_film,1338799,movie,JUJUTSU KAISEN: Hidden Inventory / Premature Death - The Movie,劇場版総集編 呪術廻戦 懐玉・玉折,2025-05-30,2024-2026,2,5.9284,8.601,124,2026-09-04
+animated_film_055,animated_film,1399914,movie,The Simpsons: O C'mon All Ye Faithful,The Simpsons: O C'mon All Ye Faithful,2024-12-16,2024-2026,2,5.0097,7.01,101,2026-09-04
+animated_film_056,animated_film,839033,movie,The Lord of the Rings: The War of the Rohirrim,The Lord of the Rings: The War of the Rohirrim,2024-12-05,2024-2026,3,13.4649,6.529,923,2026-09-04
+animated_film_057,animated_film,870360,movie,The Day the Earth Blew Up: A Looney Tunes Movie,The Day the Earth Blew Up: A Looney Tunes Movie,2024-08-01,2024-2026,3,9.6056,7.559,236,2026-09-04
+animated_film_058,animated_film,1117857,movie,In Your Dreams,In Your Dreams,2025-11-07,2024-2026,3,8.3593,6.9,250,2026-09-04
+animated_film_059,animated_film,1159311,movie,My Hero Academia: You're Next,僕のヒーローアカデミア THE MOVIE ユアネクスト,2024-08-02,2024-2026,3,8.9238,7.259,241,2026-09-04
+animated_film_060,animated_film,1315772,movie,Minions & Monsters,Minions & Monsters,2026-06-24,2024-2026,3,160.3543,7.595,996,2026-09-04
+anglophone_animation_001,anglophone_animation,62125,tv,Vixen,Vixen,2015-08-25,2015-2017,1,4.9467,6.905,132,2026-09-04
+anglophone_animation_002,anglophone_animation,70779,tv,LEGO Friends: The Power of Friendship,LEGO Friends: The Power of Friendship,2016-03-04,2015-2017,1,2.0598,7.625,120,2026-09-04
+anglophone_animation_003,anglophone_animation,72499,tv,My Little Pony: Equestria Girls,My Little Pony: Equestria Girls,2017-06-24,2015-2017,1,3.5475,7.9,116,2026-09-04
+anglophone_animation_004,anglophone_animation,77184,tv,Halo: The Fall of Reach,Halo: The Fall of Reach,2015-10-27,2015-2017,1,4.6083,6.979,469,2026-09-04
+anglophone_animation_005,anglophone_animation,63522,tv,F is for Family,F is for Family,2015-12-18,2015-2017,2,13.7404,7.386,457,2026-09-04
+anglophone_animation_006,anglophone_animation,64752,tv,The Lion Guard,The Lion Guard,2016-01-15,2015-2017,2,15.5596,7.7,270,2026-09-04
+anglophone_animation_007,anglophone_animation,66558,tv,Voltron: Legendary Defender,Voltron: Legendary Defender,2016-06-10,2015-2017,2,17.814,7.3,151,2026-09-04
+anglophone_animation_008,anglophone_animation,70047,tv,Rapunzel's Tangled Adventure,Rapunzel's Tangled Adventure,2017-03-24,2015-2017,2,18.336,7.406,106,2026-09-04
+anglophone_animation_009,anglophone_animation,71024,tv,Castlevania,Castlevania,2017-07-07,2015-2017,2,19.1189,8.272,1602,2026-09-04
+anglophone_animation_010,anglophone_animation,68295,tv,Ben 10,Ben 10,2016-10-01,2015-2017,3,60.3288,5.9,218,2026-09-04
+anglophone_animation_011,anglophone_animation,68665,tv,Big Hero 6 The Series,Big Hero 6 The Series,2017-11-20,2015-2017,3,25.0027,7.6,104,2026-09-04
+anglophone_animation_012,anglophone_animation,72350,tv,DuckTales,DuckTales,2017-08-12,2015-2017,3,33.4247,7.8,320,2026-09-04
+anglophone_animation_013,anglophone_animation,72705,tv,Marvel's Spider-Man,Marvel's Spider-Man,2017-08-19,2015-2017,3,22.5092,7.484,397,2026-09-04
+anglophone_animation_014,anglophone_animation,74204,tv,Big Mouth,Big Mouth,2017-09-29,2015-2017,3,31.7836,7.607,1253,2026-09-04
+anglophone_animation_015,anglophone_animation,79948,tv,The Hollow,The Hollow,2018-06-08,2018-2020,1,8.5493,6.907,107,2026-09-04
+anglophone_animation_016,anglophone_animation,86340,tv,Undone,Undone,2019-09-12,2018-2020,1,7.5913,7.683,394,2026-09-04
+anglophone_animation_017,anglophone_animation,96713,tv,The Midnight Gospel,The Midnight Gospel,2020-04-20,2018-2020,1,8.7985,8.277,954,2026-09-04
+anglophone_animation_018,anglophone_animation,99127,tv,LEGO Jurassic World: The Secret Exhibit,LEGO Jurassic World: The Secret Exhibit,2018-11-29,2018-2020,1,3.0944,7.3,104,2026-09-04
+anglophone_animation_019,anglophone_animation,99777,tv,Onyx Equinox,Onyx Equinox,2020-11-21,2018-2020,1,1.9559,8.31,261,2026-09-04
+anglophone_animation_020,anglophone_animation,79732,tv,She-Ra and the Princesses of Power,She-Ra and the Princesses of Power,2018-11-13,2018-2020,2,18.0812,8.458,839,2026-09-04
+anglophone_animation_021,anglophone_animation,81046,tv,The Dragon Prince,The Dragon Prince,2018-09-14,2018-2020,2,17.3348,8.205,715,2026-09-04
+anglophone_animation_022,anglophone_animation,90855,tv,SAINT SEIYA: Knights of the Zodiac,SAINT SEIYA: Knights of the Zodiac,2019-07-19,2018-2020,2,15.4677,7.382,672,2026-09-04
+anglophone_animation_023,anglophone_animation,91425,tv,Infinity Train,Infinity Train,2019-08-05,2018-2020,2,17.5285,8.431,325,2026-09-04
+anglophone_animation_024,anglophone_animation,105797,tv,Wizards: Tales of Arcadia,Wizards: Tales of Arcadia,2020-08-07,2018-2020,2,12.5761,8.159,405,2026-09-04
+anglophone_animation_025,anglophone_animation,85349,tv,Amphibia,Amphibia,2019-06-17,2018-2020,3,29.526,8.605,357,2026-09-04
+anglophone_animation_026,anglophone_animation,89456,tv,Primal,Primal,2019-10-08,2018-2020,3,22.6812,8.659,1612,2026-09-04
+anglophone_animation_027,anglophone_animation,92685,tv,The Owl House,The Owl House,2020-01-10,2018-2020,3,30.1614,8.673,1832,2026-09-04
+anglophone_animation_028,anglophone_animation,97645,tv,Solar Opposites,Solar Opposites,2020-05-08,2018-2020,3,38.3017,7.791,661,2026-09-04
+anglophone_animation_029,anglophone_animation,107124,tv,Animaniacs,Animaniacs,2020-11-20,2018-2020,3,27.4074,8.428,601,2026-09-04
+anglophone_animation_030,anglophone_animation,114466,tv,Baymax!,Baymax!,2022-06-29,2021-2023,1,7.4203,7.5,284,2026-09-04
+anglophone_animation_031,anglophone_animation,114502,tv,Cars on the Road,Cars on the Road,2022-09-08,2021-2023,1,9.5778,7.4,309,2026-09-04
+anglophone_animation_032,anglophone_animation,127372,tv,Captain Laserhawk: A Blood Dragon Remix,Captain Laserhawk: A Blood Dragon Remix,2023-10-19,2021-2023,1,4.9286,7.542,108,2026-09-04
+anglophone_animation_033,anglophone_animation,128255,tv,Transformers: War for Cybertron: Kingdom,Transformers: War for Cybertron: Kingdom,2021-07-29,2021-2023,1,2.5944,7.736,104,2026-09-04
+anglophone_animation_034,anglophone_animation,158307,tv,Ice Age: Scrat Tales,Ice Age: Scrat Tales,2022-04-13,2021-2023,1,8.7798,7.285,188,2026-09-04
+anglophone_animation_035,anglophone_animation,238151,tv,Carol & the End of the World,Carol & the End of the World,2023-12-15,2021-2023,1,7.1907,7.341,107,2026-09-04
+anglophone_animation_036,anglophone_animation,94252,tv,Human Resources,Human Resources,2022-03-18,2021-2023,2,17.9787,6.52,151,2026-09-04
+anglophone_animation_037,anglophone_animation,96658,tv,Masters of the Universe: Revelation,Masters of the Universe: Revelation,2021-07-23,2021-2023,2,12.1947,6.59,412,2026-09-04
+anglophone_animation_038,anglophone_animation,103786,tv,The Cuphead Show!,The Cuphead Show!,2022-02-18,2021-2023,2,16.2132,7.939,391,2026-09-04
+anglophone_animation_039,anglophone_animation,136322,tv,Dragons: The Nine Realms,Dragons: The Nine Realms,2021-12-23,2021-2023,2,15.44,7.7,286,2026-09-04
+anglophone_animation_040,anglophone_animation,152483,tv,The Boys Presents: Diabolical,The Boys Presents: Diabolical,2022-03-03,2021-2023,2,17.2576,7.137,443,2026-09-04
+anglophone_animation_041,anglophone_animation,95557,tv,INVINCIBLE,INVINCIBLE,2021-03-25,2021-2023,3,72.3659,8.633,6039,2026-09-04
+anglophone_animation_042,anglophone_animation,115577,tv,Sonic Prime,Sonic Prime,2022-12-15,2021-2023,3,21.8771,8.271,551,2026-09-04
+anglophone_animation_043,anglophone_animation,124920,tv,Rugrats,Rugrats,2021-05-27,2021-2023,3,22.3783,6.9,135,2026-09-04
+anglophone_animation_044,anglophone_animation,125928,tv,My Adventures with Superman,My Adventures with Superman,2023-07-07,2021-2023,3,23.5244,8.12,271,2026-09-04
+anglophone_animation_045,anglophone_animation,131378,tv,Adventure Time: Fionna and Cake,Adventure Time: Fionna and Cake,2023-08-31,2021-2023,3,22.9707,8.7,348,2026-09-04
+anglophone_animation_046,anglophone_animation,114500,tv,Win or Lose,Win or Lose,2025-02-19,2024-2026,1,7.6509,8.1,150,2026-09-04
+anglophone_animation_047,anglophone_animation,219532,tv,Exploding Kittens,Exploding Kittens,2024-07-12,2024-2026,1,10.4005,7.457,115,2026-09-04
+anglophone_animation_048,anglophone_animation,229544,tv,Among Us,Among Us,2026-06-05,2024-2026,1,9.7642,9.0,184,2026-09-04
+anglophone_animation_049,anglophone_animation,237853,tv,WondLa,WondLa,2024-06-27,2024-2026,1,9.2896,7.413,103,2026-09-04
+anglophone_animation_050,anglophone_animation,251091,tv,Star Wars: Tales of the Empire,Star Wars: Tales of the Empire,2024-05-04,2024-2026,1,8.0492,7.368,234,2026-09-04
+anglophone_animation_051,anglophone_animation,219080,tv,The Mighty Nein,The Mighty Nein,2025-11-19,2024-2026,2,13.8846,8.123,134,2026-09-04
+anglophone_animation_052,anglophone_animation,255868,tv,Dream Productions,Dream Productions,2024-12-11,2024-2026,2,11.4045,7.8,167,2026-09-04
+anglophone_animation_053,anglophone_animation,256695,tv,Regular Show: The Lost Tapes,Regular Show: The Lost Tapes,2026-05-11,2024-2026,2,17.0393,9.6,111,2026-09-04
+anglophone_animation_054,anglophone_animation,289219,tv,Star Wars: Maul - Shadow Lord,Star Wars: Maul - Shadow Lord,2026-04-06,2024-2026,2,20.0669,8.603,228,2026-09-04
+anglophone_animation_055,anglophone_animation,291904,tv,The Wonderfully Weird World of Gumball,The Wonderfully Weird World of Gumball,2025-10-06,2024-2026,2,13.3608,8.63,100,2026-09-04
+anglophone_animation_056,anglophone_animation,125909,tv,Batman: Caped Crusader,Batman: Caped Crusader,2024-08-01,2024-2026,3,41.9052,7.313,280,2026-09-04
+anglophone_animation_057,anglophone_animation,202284,tv,Ninja Kamui,Ninja Kamui,2024-02-11,2024-2026,3,27.0386,8.156,363,2026-09-04
+anglophone_animation_058,anglophone_animation,213249,tv,Sausage Party: Foodtopia,Sausage Party: Foodtopia,2024-07-11,2024-2026,3,26.6153,6.815,213,2026-09-04
+anglophone_animation_059,anglophone_animation,219543,tv,Creature Commandos,Creature Commandos,2024-12-05,2024-2026,3,23.8164,7.787,375,2026-09-04
+anglophone_animation_060,anglophone_animation,228878,tv,Common Side Effects,Common Side Effects,2025-02-02,2024-2026,3,23.6556,8.452,343,2026-09-04
