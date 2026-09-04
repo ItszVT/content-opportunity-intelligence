@@ -1,0 +1,102 @@
+{
+  "snapshot_date": "2026-09-04",
+  "collected_at": "2026-09-04T10:39:50.877449+00:00",
+  "sampling_config_sha256_16": "df0dfb30b8c351ba",
+  "precedence_order": [
+    "anime",
+    "kdrama",
+    "animated_film",
+    "anglophone_animation"
+  ],
+  "total_titles": 1502,
+  "by_vertical": {
+    "anime": 363,
+    "kdrama": 224,
+    "animated_film": 751,
+    "anglophone_animation": 164
+  },
+  "fetch_stats": {
+    "anime": {
+      "pages": 19,
+      "raw_results": 363,
+      "duplicates": 0,
+      "rejected": {}
+    },
+    "kdrama": {
+      "pages": 12,
+      "raw_results": 224,
+      "duplicates": 0,
+      "rejected": {}
+    },
+    "animated_film": {
+      "pages": 38,
+      "raw_results": 751,
+      "duplicates": 0,
+      "rejected": {}
+    },
+    "anglophone_animation": {
+      "pages": 9,
+      "raw_results": 170,
+      "duplicates": 0,
+      "rejected": {}
+    }
+  },
+  "reassignments": [
+    {
+      "tmdb_id": 231003,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "tmdb_id": 239287,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "US",
+        "JP"
+      ]
+    },
+    {
+      "tmdb_id": 155292,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "JP",
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "tmdb_id": 217766,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "tmdb_id": 105248,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "JP",
+        "PL",
+        "US"
+      ]
+    },
+    {
+      "tmdb_id": 114478,
+      "kept_in": "anime",
+      "removed_from": "anglophone_animation",
+      "origin_country": [
+        "JP",
+        "US"
+      ]
+    }
+  ]
+}
