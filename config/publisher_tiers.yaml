@@ -1,1 +1,78 @@
+# Publisher tiers used to estimate SERP competition.
+# Higher tier = generally stronger editorial competition.
 
+tiers:
+
+  5:
+    name: major_publisher
+    description: Major entertainment or media publishers with strong authority.
+    examples:
+      anime:
+        - CBR
+        - ScreenRant
+        - IGN
+      kdrama:
+        - Netflix Tudum
+        - Soompi
+      animated_film:
+        - Variety
+        - The Hollywood Reporter
+      anglophone_animation:
+        - IGN
+        - ScreenRant
+        - CBR
+
+  4:
+    name: strong_specialist
+    description: Established specialist sites with strong topical relevance.
+    examples:
+      anime:
+        - Anime News Network
+      kdrama:
+        - MyDramaList
+        - AsianWiki
+      animated_film:
+        - Animation World Network
+      anglophone_animation:
+        - Animation Magazine
+
+  3:
+    name: established_editorial
+    description: Established smaller publishers or specialist editorial sites.
+    examples:
+      anime:
+        - Anime Corner
+      kdrama:
+        - KDramaStars
+      animated_film:
+        - Smaller established animation publications
+      anglophone_animation:
+        - Smaller established animation publications
+
+  2:
+    name: database_reference
+    description: Reference, database, wiki, or information sites.
+    examples:
+      all:
+        - IMDb
+        - Wikipedia
+        - TMDB
+
+  1:
+    name: user_generated
+    description: Community or user generated content.
+    examples:
+      all:
+        - Reddit
+        - Quora
+
+special_cases:
+
+  fandom:
+    tier: 3
+    description: Fandom is treated separately because multiple Fandom results can dominate animation SERPs.
+
+competition_flags:
+
+  fandom_result_threshold: 3
+  description: Flag a SERP when three or more results come from Fandom.
