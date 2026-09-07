@@ -1,0 +1,3 @@
+title_id,wiki_slug_en,reason
+anime_009,,"TMDB QID points at the film entity; the sample row is the TV series. The sitelink was correct for the wrong work, so tier 1 accepted it"
+animated_film_050,,"TMDB QID points at the manga entity; the sample row is the film. Same failure mode as anime_009"
