@@ -9,6 +9,11 @@ on:
     # 03:17 UTC. Deliberately off the hour -- scheduled jobs on the hour
     # queue behind everyone else's and can be delayed or dropped.
     - cron: "17 3 * * *"
+    # Backup. GitHub silently skips scheduled runs when its queues are
+    # busy, and a skipped day cannot be backfilled. If the 03:17 run
+    # already collected today, pipelines.daily writes nothing and the
+    # commit step exits 0.
+    - cron: "43 15 * * *"
   workflow_dispatch:
 
 # Never let two runs write the same snapshot at once.
