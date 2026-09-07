@@ -751,7 +751,7 @@ See §17.
 2. **Pageviews are a proxy, not search volume.** Bookmarks, links, internal navigation. Correlation with Trends is measured and reported.
 3. **SERP source is not Google.** A free metasearch aggregator. Similar for informational queries, differs on freshness-sensitive ones.
 4. **240 titles** supports within-vertical percentile scoring and distributional comparison, not fine-grained modelling.
-5. **Wikipedia coverage is uneven** across verticals; partial-score rates will differ and are reported.
+5. **Wikipedia coverage is uneven across verticals — now measured, not anticipated.** English match rates on the frozen sample: kdrama 100% (60/60), `anglophone_animation` 100% (60/60), `animated_film` 85% (51/60), **anime 23% (14/60)**. The anime shortfall is structural rather than a resolution failure: 46 of 60 anime titles carry a TMDB-supplied Wikidata QID that has no sitelink in *any* language, because English Wikipedia documents anime by franchise — the light novel or manga — with the adaptation as a section inside it. The same titles match roughly 85% on Japanese Wikipedia when searched on `title_native`, so the gap belongs to English Wikipedia's editorial structure, not to the titles. **Consequence:** most anime carry `demand_level = NULL`, score as partial, and are excluded from H1 (decision 21). H1 therefore compares three verticals, not four, and that must be stated wherever H1 is reported. The asymmetry is itself a result: a demand index built on single-language pageviews inherits that language's coverage bias, and the bias is largest for exactly the non-anglophone content such an index is most often used to evaluate.
 6. **IMDb linkage is incomplete** for some TV titles.
 
 ### From methodology
@@ -1171,8 +1171,12 @@ Both lists from §18, in full.
 | 16 | H3 continuous, not pass/fail | 0.82 has no principled cutoff | 09-03 | Second threshold | Arbitrary | No |
 | 17 | Weights: 0.25/0.25/0.20/0.30 | Competition is the differentiating signal | 09-03 | Equal | Under-weights the novel component | Yes — sensitivity-tested |
 | 18 | Staleness tolerance 21 days | One missed fortnightly SERP cycle | 09-03 | 7 / 30 | 7 too strict for SERP cadence; 30 permits real staleness | Yes |
-| 19 | Corrected `sampling.yaml` in place to match §4 | Transcription errors: no `release_date_max`, no IE in the anglophone allowlist, no adult exclusion, no `max_per_cell` | 09-04 | Create `sampling_v2.yaml` | No data collected at the time, so there were no results to fit the method to. A v2 superseding a v1 that was never used obscures the history | No — frozen for real now |
-| 20 | Cross-vertical overlap resolved by first-match precedence (`anime` > `kdrama` > `animated_film` > `anglophone_animation`) | 6 titles satisfied both `anime` and `anglophone_animation`. Unresolved they would be sampled twice, appear in two within-vertical percentile ranks, and contaminate H1 | 09-04 | (a) drop ambiguous titles from both; (b) allow duplicates | (a) deletes internationally co-produced titles, precisely the target population; (b) breaks H1's assumption that verticals are distinct. Precedence is deterministic and reaches §4's stated intent without reintroducing an exclusion rule | No — frozen before the population snapshot |
+
+**Decisions 1–18 are the pre-data freeze and end here.** Everything from 19 onward is recorded in **`docs/decision_log.md`**, which is the live record and the single source of truth. This table is not extended — two files holding the same decisions is how they drift, and a reviewer who finds two versions cannot tell which one governed a result.
+
+The break is not arbitrary. 1–18 were fixed before any data existed; 19 onward were made while the pipeline was running, each in response to something the data revealed. The split is legible on its own: methodology first, then a dated log of everything that changed and why.
+
+Current entries in the live log — 19 `sampling.yaml` corrected in place, 20 cross-vertical precedence, 21 anime resolve to `NULL` rather than the franchise article, 22 search tiers guarded on title, year and parent-article.
 
 ## §30 — Status tracker
 
@@ -1192,8 +1196,8 @@ Legend: ☐ not started · ◐ in progress · ☑ complete · ⚠ blocked · ? n
 - ☑ `tmdb.py`
 - ☑ Eligible population snapshot committed
 - ☑ Sampling, `sample_240_v1.csv` committed
-- ◐ **Daily Action green** — pipeline written, first snapshot collected manually; needs three consecutive automated green runs
-- ☐ Entity resolution (Wikipedia), match rate reported ← **NEXT**
+- ☑ **Daily Action green** — three consecutive automated runs (09-05, 09-06, 09-07), all `github-actions[bot]` commits, 240/240 rows each. Backup schedule and §24 gap check added 09-07
+- ◐ Entity resolution — code complete, 240 resolved in dry-run, match rate reported per vertical. Remaining: real run, then the manual queue ← **NEXT**
 - ☐ `wikipedia.py`
 - ☐ `serp.py`, first full collection
 - ☐ `competition.py`
@@ -1317,21 +1321,63 @@ The general rule for this project: anything that could silently stop the cron ge
 
 Failure notifications should be enabled at GitHub → Settings → Notifications → Actions → failed workflows only. Without them a broken cron is invisible until someone happens to look.
 
+### Session 2 — 2026-09-07
+
+**Daily Action closed out.** Three automated runs (09-05, 09-06, 09-07), all committed by `github-actions[bot]`, 240 rows and 240 distinct `title_id` in each. The bot authorship is the part that mattered: the 09-04 manual dispatch never exercised commit-and-push, because that day's file already existed locally.
+
+Two hardening changes to the collection path, both prompted by what the runs revealed:
+
+1. **Backup schedule** at 15:43 UTC alongside 03:17. The scheduled runs landed 4½ hours late on both days — normal for free-tier cron, but GitHub also *drops* delayed runs under load, and a dropped day cannot be backfilled. The backup costs nothing on a normal day: `pipelines/daily.py` exits before writing when the file exists, and the commit step exits 0 on a clean tree.
+2. **§24 snapshot-gap check**, which was specified but never implemented. Row count alone cannot see a gap — 240 against 240 looks healthy across a three-day hole. It now compares `observed_at` between snapshots and fails above two days, so a skipped run triggers the failure notification instead of passing quietly. Every date comparison in the module moved to UTC at the same time; `date.today()` is local, and a check that loosens depending on where it runs is worse than no check.
+
+**Entity resolution written** as `pipelines/entity_resolution.py` (not `src/resolve/` — it is a run-once script producing a frozen artifact, the same shape as `sample.py`). Four passes: TMDB `/external_ids` for `imdb_id` and a Wikidata QID; Wikidata `wbgetentities` for en/ko/ja sitelinks in batches of 50; per-title guarded search for what pass 2 missed; then a sitelink backfill for entities discovered during pass 3.
+
+Pass 4 is not optional. Passes 2 and 3 find *different* entities, so a title resolved by search has a QID that was never in the pass 2 batch. Before the backfill existed, Korean coverage read 1/20 on a sample where every K-drama had a Korean article available.
+
+### The finding — English Wikipedia coverage is not uniform
+
+| Vertical | English | via sitelink | QID, no sitelink | no QID |
+|---|---|---|---|---|
+| `kdrama` | 100% (60/60) | 60 | 0 | 0 |
+| `anglophone_animation` | 100% (60/60) | 59 | 0 | 1 |
+| `animated_film` | 85% (51/60) | 50 | 8 | 2 |
+| `anime` | **23% (14/60)** | 12 | **46** | 2 |
+
+Overall: 185/240 English slugs, 122 Korean, 104 Japanese, 240/240 IMDb IDs. 55 titles (23%) to manual review, at the top of the §9 budget.
+
+46 of 60 anime have a well-populated Wikidata item — correct instance-of, forty-odd properties — with **no sitelink in any language.** English Wikipedia documents anime by franchise: the light novel or manga has the article, the adaptation is a section inside it. Searching Japanese Wikipedia on `title_native` matches roughly 85% of the same 60 titles, which locates the gap in enwiki's editorial structure rather than in the titles or the resolver.
+
+Recorded as decision 21 and limitation 5. Consequence: most anime score partial and leave H1, which now compares three verticals.
+
+### Why the guards exist — decision 22
+
+The first working version reported a 95% match rate. Reading twenty rows by hand found *WorldEnd: What are you doing at the end of the world?* resolved to **So You Think You Can Dance: The Next Generation**, and *One Piece: Adventure of Nebulandia* resolved to the One Piece series article whose pageviews span a decades-long franchise.
+
+§9's tier 3 accepts any search hit whose entity has a film-or-television instance-of, and checks no title at all. SYTYCD is a real television series, so it passed the only gate in place. Three guards were added — title similarity ≥0.85, publication year within ±1, and rejection of article titles that are proper prefixes of the TMDB title — and the headline rate fell from 95% to 77%.
+
+The 95% was the false number. Worth stating plainly in `methodology.md`: an unaudited match rate is a claim about the matcher, not about the data.
+
+**Tier 1 stays unguarded.** A Wikidata sitelink is Wikidata's own assertion that entity and article are the same thing, which is stronger evidence than any string comparison. Its failure mode is upstream — TMDB occasionally supplies a QID for the wrong work. Two cases in 185 (≈1%): *The Disastrous Life of Saiki K.* (TV row, film entity) and *Monsters 103 Mercies Dragon Damnation* (film row, manga entity). A type gate would have rejected roughly fifteen correct matches to catch those two, because the Wikidata type vocabulary is wider than expected — animated short film, television special, several anime and web-series variants. Both go to manual review by hand instead. Tuning a rule against two known cases is what §31 exists to prevent.
+
 ### Verify at the start of the next session
 
-1. **The 03:17 UTC run fired.** Look for a commit from `github-actions[bot]` and a second file in `data/snapshots/`. This is the first run to exercise the commit-and-push path.
-2. **Row count held at 240** in the new snapshot, and the ±10% check passed against day one.
-3. If either failed, fix before writing new code — a gap compounds daily.
+1. `data/snapshots/` has files for 09-08 onward with no gaps. If a day is missing, check whether the 15:43 UTC backup fired — that is what it is for.
+2. The gap check has not fired. If it has, the cron is dropping runs and that is the priority.
 
 ### Next action
 
-**Entity resolution, English Wikipedia** (§9 step 2, §23 step 6) → `src/resolve/entity_resolution.py`.
+**Run entity resolution for real** — `python -m pipelines.entity_resolution --show`, without `--dry-run` — writing `data/frozen/title_map.csv` and `data/frozen/manual_review.csv`.
 
-Resolution order matters and is fixed in §9: Wikidata via TMDB external IDs, then Wikipedia search on `title_primary` + year, then search on title alone with an instance-of check, then manual review. Reject disambiguation pages; follow redirects and store the canonical slug. Expect 15–20% to land in `data/frozen/manual_review.csv`.
+Then the manual queue, which is smaller than 55: work the **9 non-anime** cases plus the 2 known-bad tier-1 matches. The 46 anime stay `NULL` per decision 21 — resolving them by hand would reintroduce exactly the franchise substitution the decision rejects.
 
-Report auto-match rate **per vertical**. The variation is itself a finding — uneven Wikipedia coverage across verticals is exactly what §10 and limitation 5 are about, and it determines the partial-score rate.
+Then `wikipedia.py` (§23 step 7), then pageviews into `pipelines/daily.py`. Pageviews backfill to 2015, so `demand_level` and `demand_momentum` are computable as soon as slugs exist — no waiting.
 
-Then `wikipedia.py`, then add pageviews to `pipelines/daily.py`.
+`serp.py` (§23 step 9) depends only on the sample and `query_types.yaml`, not on resolution, and can start in parallel. It is fortnightly, carries the heaviest weight at 0.30, and 960 queries at 3–5s jittered is over an hour of wall clock.
+
+### Still open from session 1
+
+- Pin `requirements.txt` to exact versions, seven dependencies by hand. Not `pip freeze` — it captured all 105 Codespaces packages on 09-04.
+- `pipelines/sample.py` prints `np.int64(5)`; `counts.tolist()` instead of `list(counts.values)`.
 
 ## §31 — Rules for changing methodology
 
