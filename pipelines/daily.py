@@ -17,6 +17,10 @@ Design points:
   but a run on a new day can never be served yesterday's response. A plain
   24h TTL would blur that boundary.
 
+  Every date in this module is UTC. The runner is UTC, a developer machine
+  may not be, and a check that silently loosens depending on where it runs
+  is worse than no check.
+
   Quality checks fail the process with a non-zero exit. A cron that breaks
   silently is worse than no cron, because you go on trusting a series that
   stopped updating.
@@ -47,10 +51,16 @@ FROZEN_SAMPLE = Path("data/frozen/sample_240_v1.csv")
 SNAPSHOT_DIR = Path("data/snapshots")
 REQUEST_SLEEP_SECONDS = 0.1
 ROW_COUNT_TOLERANCE = 0.10
+MAX_SNAPSHOT_GAP_DAYS = 2
 
 
 class QualityCheckFailure(RuntimeError):
     pass
+
+
+def utc_today() -> str:
+    """Today in UTC, ISO format. The single source of 'now' in this module."""
+    return datetime.now(timezone.utc).date().isoformat()
 
 
 def fetch_title_state(
@@ -84,7 +94,7 @@ def fetch_title_state(
 
 
 def collect(sample: pd.DataFrame, client: TMDBClient) -> tuple[pd.DataFrame, list[dict]]:
-    observed_at = datetime.now(timezone.utc).date().isoformat()
+    observed_at = utc_today()
     collected_at = datetime.now(timezone.utc).isoformat()
 
     rows, failures = [], []
@@ -141,7 +151,7 @@ def run_quality_checks(
     if len(bad_ratings):
         errors.append(f"{len(bad_ratings)} rows with vote_average outside 0-10")
 
-    if frame["observed_at"].max() > date.today().isoformat():
+    if frame["observed_at"].max() > utc_today():
         errors.append("observed_at is in the future")
 
     if frame[["vote_count", "popularity", "status"]].isna().any().any():
@@ -149,6 +159,18 @@ def run_quality_checks(
 
     # A silent partial collection is the failure mode this guards against.
     if previous is not None:
+        # §24: a skipped scheduled run leaves a hole that cannot be backfilled.
+        # Row count alone will not catch it -- 240 vs 240 looks fine across a gap.
+        gap = (
+            date.fromisoformat(frame["observed_at"].max())
+            - date.fromisoformat(previous["observed_at"].max())
+        ).days
+        if gap > MAX_SNAPSHOT_GAP_DAYS:
+            errors.append(
+                f"{gap}-day gap since the previous snapshot; "
+                "the scheduled run may have been skipped"
+            )
+
         change = abs(len(frame) - len(previous)) / len(previous)
         if change > ROW_COUNT_TOLERANCE:
             errors.append(
@@ -199,7 +221,7 @@ def main() -> int:
     client = TMDBClient()
     frame, failures = collect(sample, client)
 
-    observed_at = frame["observed_at"].iloc[0] if len(frame) else date.today().isoformat()
+    observed_at = frame["observed_at"].iloc[0] if len(frame) else utc_today()
     print(f"collected {len(frame)} rows, {len(failures)} failures, observed_at={observed_at}")
 
     SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
