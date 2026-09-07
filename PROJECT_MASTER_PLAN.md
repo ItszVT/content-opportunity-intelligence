@@ -1,9 +1,9 @@
 # PROJECT MASTER PLAN
 ## Content Opportunity Intelligence
 
-**Version 1.2 — updated 2026-09-04**
-**Status:** Freeze complete. V1 in progress — sample drawn and frozen, daily pipeline live.
-**Last session:** 2026-09-04. See §30.1 for exactly where to resume.
+**Version 1.3 — updated 2026-09-07**
+**Status:** Freeze complete. V1 in progress — sample frozen, daily pipeline live and verified, entity resolution complete.
+**Last session:** 2026-09-07. See §30.1 for exactly where to resume.
 
 > This is the single source of truth. When returning to this project, read §0, then **§30.1 (progress log — what has been done and what is next)**, then §30 for the checklist and §21 for phase context. Do not redesign decisions recorded in §29 unless a genuine methodological problem is identified — and if one is, follow §31.
 
@@ -751,7 +751,7 @@ See §17.
 2. **Pageviews are a proxy, not search volume.** Bookmarks, links, internal navigation. Correlation with Trends is measured and reported.
 3. **SERP source is not Google.** A free metasearch aggregator. Similar for informational queries, differs on freshness-sensitive ones.
 4. **240 titles** supports within-vertical percentile scoring and distributional comparison, not fine-grained modelling.
-5. **Wikipedia coverage is uneven across verticals — now measured, not anticipated.** English match rates on the frozen sample: kdrama 100% (60/60), `anglophone_animation` 100% (60/60), `animated_film` 85% (51/60), **anime 23% (14/60)**. The anime shortfall is structural rather than a resolution failure: 46 of 60 anime titles carry a TMDB-supplied Wikidata QID that has no sitelink in *any* language, because English Wikipedia documents anime by franchise — the light novel or manga — with the adaptation as a section inside it. The same titles match roughly 85% on Japanese Wikipedia when searched on `title_native`, so the gap belongs to English Wikipedia's editorial structure, not to the titles. **Consequence:** most anime carry `demand_level = NULL`, score as partial, and are excluded from H1 (decision 21). H1 therefore compares three verticals, not four, and that must be stated wherever H1 is reported. The asymmetry is itself a result: a demand index built on single-language pageviews inherits that language's coverage bias, and the bias is largest for exactly the non-anglophone content such an index is most often used to evaluate.The same mechanism appears outside anime. All 9 unmatched `animated_film` titles are components rather than standalone works — one part of a trilogy, a television special, a Pixar short — and their rejected candidates are franchise or list pages (`Digimon Adventure tri.`, `List of One Piece television specials`, `Curious George (franchise)`, `The Incredibles (franchise)`). English Wikipedia gives an article to a *release*, not to a component of one. Coverage therefore tracks a title's structural position rather than its popularity, and the verticals differ in how many components they contain. This is the more general form of the anime result, and the two sets of evidence support each other.
+5. **Wikipedia coverage is uneven across verticals — now measured, not anticipated.** English match rates on the frozen sample: kdrama 100% (60/60), `anglophone_animation` 100% (60/60), `animated_film` 85% (51/60), **anime 23% (14/60)**. The anime shortfall is structural rather than a resolution failure: 46 of 60 anime titles carry a TMDB-supplied Wikidata QID that has no sitelink in *any* language, because English Wikipedia documents anime by franchise — the light novel or manga — with the adaptation as a section inside it. The same titles match roughly 85% on Japanese Wikipedia when searched on `title_native`, so the gap belongs to English Wikipedia's editorial structure, not to the titles. **Consequence:** most anime carry `demand_level = NULL`, score as partial, and are excluded from H1 (decision 21). H1 therefore compares three verticals, not four, and that must be stated wherever H1 is reported. The asymmetry is itself a result: a demand index built on single-language pageviews inherits that language's coverage bias, and the bias is largest for exactly the non-anglophone content such an index is most often used to evaluate. The same mechanism appears outside anime. All 9 unmatched `animated_film` titles are components rather than standalone works — one part of a trilogy, a television special, a Pixar short — and their rejected candidates are franchise or list pages (`Digimon Adventure tri.`, `List of One Piece television specials`, `Curious George (franchise)`, `The Incredibles (franchise)`). English Wikipedia gives an article to a *release*, not to a component of one. Coverage therefore tracks a title's structural position rather than its popularity, and the verticals differ in how many components they contain. This is the more general form of the anime result, and the two sets of evidence support each other.
 6. **IMDb linkage is incomplete** for some TV titles.
 
 ### From methodology
@@ -1197,13 +1197,15 @@ Legend: ☐ not started · ◐ in progress · ☑ complete · ⚠ blocked · ? n
 - ☑ Eligible population snapshot committed
 - ☑ Sampling, `sample_240_v1.csv` committed
 - ☑ **Daily Action green** — three consecutive automated runs (09-05, 09-06, 09-07), all `github-actions[bot]` commits, 240/240 rows each. Backup schedule and §24 gap check added 09-07
-- ◐ Entity resolution — code complete, 240 resolved in dry-run, match rate reported per vertical. Remaining: real run, then the manual queue ← **NEXT**
-- ☐ `wikipedia.py`
-- ☐ `serp.py`, first full collection
+- ☑ Entity resolution — `title_map.csv` (185/240 English slugs), `manual_review.csv` (55), `title_map_overrides.csv` (2 forced null). Match rate reported per vertical; the variation is a finding, see §18 limitation 5 and decisions 21–22
+- ☐ `serp.py`, first full collection ← **NEXT** (no archive exists; every day not collecting is a lost fortnightly cycle)
+- ☐ `wikipedia.py` — must read `title_map_overrides.csv` on top of `title_map.csv`
+- ☐ Pageviews added to `pipelines/daily.py`
 - ☐ `competition.py`
 - ☐ `demand.py`
 - ☐ `opportunity.py` + staleness guard
 - ☐ Minimal dashboard
+- ☐ Housekeeping: pin `requirements.txt` to exact versions; `counts.tolist()` in `sample.py`
 
 **V2**
 - ☐ IMDb dumps + resolution
@@ -1267,7 +1269,8 @@ Legend: ☐ not started · ◐ in progress · ☑ complete · ⚠ blocked · ? n
 | `pipelines/bootstrap_population.py` | Applies precedence, freezes the population, writes a manifest | dry-run then real run |
 | `pipelines/sample.py` | §8 stratified draw, per-cell RNG, proportional redistribution | 9 tests in `tests/test_sampling.py` |
 | `pipelines/daily.py` | Daily TMDB snapshot with §24 quality checks; non-zero exit on failure | 240/240 collected, 0 failures |
-| `.github/workflows/daily.yml` | Scheduled 03:17 UTC + manual dispatch. Pinned to `actions/checkout@v5` and `actions/setup-python@v6` | manual dispatch run green, no annotations |
+| `.github/workflows/daily.yml` | Scheduled 03:17 UTC + 15:43 UTC backup, plus manual dispatch. Pinned to `actions/checkout@v5` and `actions/setup-python@v6` | three automated runs green, files committed by the bot |
+| `pipelines/entity_resolution.py` | §9 steps 1–3 in four passes. TMDB `/external_ids` → `imdb_id` + QID; Wikidata `wbgetentities` → en/ko/ja sitelinks, 50 per call; guarded search fallback; sitelink backfill for entities found during search. Guards: title similarity ≥0.85, year ±1, parent-article rejection | 240 resolved, per-vertical rates reported, 20-title hand audit |
 
 Two pagination hazards are handled explicitly in `tmdb.py` and are worth not re-discovering: `/discover` sorted by popularity reorders itself mid-pagination (so results duplicate and others are never seen — we sort by release date and dedupe on `tmdb_id` anyway), and `/discover` stops at page 500 (so the collector raises rather than freezing a silently truncated population).
 
@@ -1359,20 +1362,52 @@ The 95% was the false number. Worth stating plainly in `methodology.md`: an unau
 
 **Tier 1 stays unguarded.** A Wikidata sitelink is Wikidata's own assertion that entity and article are the same thing, which is stronger evidence than any string comparison. Its failure mode is upstream — TMDB occasionally supplies a QID for the wrong work. Two cases in 185 (≈1%): *The Disastrous Life of Saiki K.* (TV row, film entity) and *Monsters 103 Mercies Dragon Damnation* (film row, manga entity). A type gate would have rejected roughly fifteen correct matches to catch those two, because the Wikidata type vocabulary is wider than expected — animated short film, television special, several anime and web-series variants. Both go to manual review by hand instead. Tuning a rule against two known cases is what §31 exists to prevent.
 
+### Artifacts produced this session — committed, never to be edited
+
+```
+data/frozen/title_map.csv               240 rows; 185 English slugs, 122 ko, 104 ja, 240 IMDb IDs
+data/frozen/manual_review.csv            55 rows with candidates and rejection reason
+data/frozen/title_map_overrides.csv       2 rows, both forcing NULL (see below)
+data/snapshots/tmdb_snapshot_2026-09-05..07.parquet
+```
+
+`title_map_overrides.csv` is applied **on top of** `title_map.csv` by every consumer. `title_map.csv` is frozen and is never edited; corrections live in the override file so the original auto-resolution stays auditable. `wikipedia.py` must merge the two — if it reads `title_map.csv` alone, two known-wrong slugs enter the pageview series silently.
+
+### The manual queue is 0, not 55
+
+Reading the 9 non-anime cases changed the plan for them. Every one is a **component** rather than a standalone work — one part of a trilogy, a television special, a Pixar short — and every candidate offered is a franchise or list page: `Digimon Adventure tri.`, `List of One Piece television specials`, `Curious George (franchise)`, `The Incredibles (franchise)`, `Jujutsu Kaisen season 2`.
+
+Resolving those by hand would be the same substitution decision 21 rejects, so they stay `NULL` alongside the 46 anime. The only hand-entered rows are the two tier-1 mismatches, and both force `NULL` rather than supply a slug.
+
+This generalises the anime finding: English Wikipedia gives an article to a *release*, not to a component of one. Coverage tracks structural position rather than popularity. Recorded in §18 limitation 5.
+
 ### Verify at the start of the next session
 
-1. `data/snapshots/` has files for 09-08 onward with no gaps. If a day is missing, check whether the 15:43 UTC backup fired — that is what it is for.
-2. The gap check has not fired. If it has, the cron is dropping runs and that is the priority.
+1. `data/snapshots/` has a file for every day since 09-07 with no gaps. If one is missing, check whether the 15:43 UTC backup fired — that is what it is for.
+2. The §24 gap check has not fired. If it has, the cron is dropping runs and that is the priority over new code.
 
-### Next action
+### Next action — `serp.py` (§23 step 9)
 
-**Run entity resolution for real** — `python -m pipelines.entity_resolution --show`, without `--dry-run` — writing `data/frozen/title_map.csv` and `data/frozen/manual_review.csv`.
+**Before `wikipedia.py`, deliberately.** SERP results have no archive anywhere (§16), collection is fortnightly, and competition carries the heaviest weight at 0.30. Every day without a collection is a cycle that cannot be recovered. Pageviews backfill to 2015, so `wikipedia.py` loses nothing by waiting — `demand_level` and `demand_momentum` are computable the moment slugs exist, with no 90-day wait.
 
-Then the manual queue, which is smaller than 55: work the **9 non-anime** cases plus the 2 known-bad tier-1 matches. The 46 anime stay `NULL` per decision 21 — resolving them by hand would reintroduce exactly the franchise substitution the decision rejects.
+`serp.py` depends only on `sample_240_v1.csv` and `query_types.yaml` — not on entity resolution. 240 titles × 4 query types = 960 queries at 3–5s jittered, so over an hour of wall clock plus the 5–10% that need retrying. Start it early in a session and write other code while it runs.
 
-Then `wikipedia.py` (§23 step 7), then pageviews into `pipelines/daily.py`. Pageviews backfill to 2015, so `demand_level` and `demand_momentum` are computable as soon as slugs exist — no waiting.
+Then `wikipedia.py`, then pageviews into `pipelines/daily.py`, then `competition.py`.
 
-`serp.py` (§23 step 9) depends only on the sample and `query_types.yaml`, not on resolution, and can start in parallel. It is fortnightly, carries the heaviest weight at 0.30, and 960 queries at 3–5s jittered is over an hour of wall clock.
+### Remaining plan at 2h weekday sessions
+
+| Session | Work | Notes |
+|---|---|---|
+| 3 | `serp.py`, launch first full collection | Start the run early, write `wikipedia.py` alongside it |
+| 4 | `wikipedia.py`, 180-day backfill, pageviews into `daily.py` | Merge the override file |
+| 5 | `competition.py` | First real use of `publisher_tiers.yaml`; expect friction |
+| 6 | `demand.py`, `normalize.py` | Level, momentum, within-vertical percentiles |
+| 7 | `opportunity.py` + staleness guard | **Freeze weights before looking at any score.** §31 |
+| 8 | Minimal dashboard | V1 complete |
+
+V2 runs about 5–6 sessions, V3 about 6–7 (the 40 hand-labelled SERPs are judgement work and cannot be rushed), V4 about 5–6. Roughly 30–36 hours of work in total.
+
+**The calendar is longer than the work.** §15.2 needs 8–10 weeks of prospective data from the freeze date, and that clock cannot be compressed. Expect V1–V3 done by early October, findings written by mid-October, and the prospective result added in November. A portfolio version can be shown in October with the prospective validation marked pending — a pre-registered prediction still awaiting its result is a stronger thing to present than a finished project with no forward test.
 
 ### Still open from session 1
 
